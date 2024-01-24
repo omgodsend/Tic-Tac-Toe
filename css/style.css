@@ -1,0 +1,40 @@
+body{
+  background: cornflowerblue;
+}
+
+#board {
+  background-color: aliceblue;
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: grid;
+  grid-template-rows: repeat(3,1fr);
+  max-width: 400px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.cell{
+  width: 100px;
+  height: 100px;
+  font-size: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  transition: transform 0.2s;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+}
+
+.row{
+  display: flex;
+  
+}
+
+.cell:hover{
+  transform: scale(1.05) rotateY(10deg);
+  background-color: goldenrod;
+}
